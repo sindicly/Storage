@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SharedPreferencesTest">
+
+    <TextView
+        android:id="@+id/tv_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="用户名"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="20dip"
+        android:layout_marginLeft="20dip"
+        android:background="@drawable/main_brackground"
+        android:hint="写入用户名"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_userName"
+        app:layout_constraintTop_toTopOf="@+id/tv_userName" />
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="内容"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_userName"
+        app:layout_constraintTop_toTopOf="@+id/tv_userName" />
+
+    <EditText
+        android:id="@+id/edit_content"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="@drawable/main_brackground"
+        android:hint="写入用户名"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/edit_userName"
+        app:layout_constraintTop_toTopOf="@+id/tv_content" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="47dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/main_brackground"
+        android:onClick="okClick"
+        android:text="确认"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_content"
+        app:layout_constraintTop_toTopOf="@+id/tv_content" />
+
+    <Button
+        android:id="@+id/btn_recovery"
+        android:layout_width="47dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/main_brackground"
+        android:onClick="recoveryClick"
+        android:text="恢复"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/btn_ok"
+        app:layout_constraintTop_toTopOf="@+id/btn_ok" />
+</android.support.constraint.ConstraintLayout>
